@@ -590,33 +590,58 @@ body.no-scroll {
     position: relative;
 }
 
-/* Ganesha Icons flanking the content */
-.ganesha-icon {
+/* Ganesha Top Icon and Mandala Watermark */
+.ganesha-top-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    z-index: 5;
+    position: relative;
+}
+
+.ganesha-icon-top {
     display: block;
-    width: 75px;
-    height: 87px;
-    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
-    z-index: 10;
+    width: 65px;
+    height: 75px;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
     transition: var(--transition-smooth);
 }
 
-.ganesha-left {
-    position: absolute;
-    left: 45px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.ganesha-right {
-    position: absolute;
-    right: 45px;
-    top: 50%;
-    transform: translateY(-50%);
+.ganesha-top-container:hover .ganesha-icon-top {
+    transform: scale(1.08) translateY(-3px);
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
 }
 
 .hero-card .card-content {
-    padding: 0 90px;
+    padding: 0;
     width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Mandala Ganesha Watermark Background */
+.mandala-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    opacity: 0.06; /* Subtle watermark */
+    z-index: 1;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mandala-svg {
+    width: 100%;
+    height: 100%;
+    max-width: 480px;
+    max-height: 480px;
 }
 
 /* Animated Border */
@@ -1775,19 +1800,13 @@ body.no-scroll {
         max-width: 340px;
     }
 
-    /* Stack Ganesha icons side-by-side at the top on mobile */
-    .ganesha-left, .ganesha-right {
-        position: static;
-        transform: none;
-        display: inline-block;
+    .ganesha-icon-top {
         width: 55px;
         height: 64px;
-        margin: 10px 15px 20px;
-        opacity: 0.9;
     }
     
-    .hero-card .card-content {
-        padding: 0;
+    .ganesha-top-container {
+        margin-bottom: 15px;
     }
 
     .glass-card {
