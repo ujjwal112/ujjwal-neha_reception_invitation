@@ -629,7 +629,7 @@ body.no-scroll {
     transform: translate(-50%, -50%);
     width: 90%;
     height: 90%;
-    opacity: 0.06; /* Subtle watermark */
+    opacity: 0.22; /* Subtle watermark */
     z-index: 1;
     pointer-events: none;
     display: flex;
