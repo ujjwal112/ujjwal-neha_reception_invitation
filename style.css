@@ -1680,6 +1680,7 @@ body.no-scroll {
     color: var(--color-offwhite);
     cursor: pointer;
     transition: var(--transition-smooth);
+    white-space: nowrap;
 }
 
 .btn-contact-action svg {
@@ -1798,6 +1799,12 @@ body.no-scroll {
     .contact-item-card {
         width: 100%;
         max-width: 340px;
+    }
+
+    .btn-contact-action {
+        font-size: 0.72rem;
+        letter-spacing: 1px;
+        padding: 10px 8px;
     }
 
     .ganesha-icon-top {
